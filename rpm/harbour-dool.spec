@@ -21,9 +21,10 @@ Source0:    %{name}-%{version}.tar.gz
 Source100:  harbour-dool.yaml
 Patch0:     PR1.patch
 Patch1:     PR2.patch
-Requires:   python >= 2.6
-Requires:   python-six
-BuildRequires:  python >= 2.6
+Requires:   python > 2.9
+Requires:   python3-six
+BuildRequires:  pkgconfig(python)
+BuildRequires:  python3-rpm-macros
 Provides:   dstat
 Obsoletes:   dstat <= 0.7.2
 Obsoletes:   harbour-dstat <= %{version}

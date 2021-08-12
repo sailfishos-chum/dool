@@ -5,6 +5,9 @@ Release: 1
 Group: Applications/System
 URL: https://github.com/scottchiefbaker/dool/
 License: GPL
+Macros:
+  - 'upstream_name;dool'
+  - 'upstream_commit;02b1c69' # << BUMP VERSION HERE
 Sources:
   # https://github.com/scottchiefbaker/dool/archive/%{upstream_commit}.tar.gz
   - '%{name}-%{version}.tar.gz'
@@ -36,17 +39,16 @@ Description: |
   never expected.
 
 BuildArch: noarch
-Macros:
-  - 'upstream_name;dool'
-  - 'upstream_commit;02b1c69'
 SetupOptions: '-q -n %{name}-%{version}/upstream'
 Configure: none
 Builder: none
 PkgBR:
-  - python >= 2.6
+  - python3-rpm-macros
+PkgConfigBR:
+  - python
 Requires:
-  - python >= 2.6
-  - python-six
+  - python > 2.9
+  - python3-six
 Provides:
   - dstat
 Obsoletes:

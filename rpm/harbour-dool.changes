@@ -1,3 +1,7 @@
+* Thu Aug 12 2021 Nephros <sailfish@nephros.org> - 0.9.10
+- version bump
+- move to OBS chum
+
 * Wed Jun  9 2021 Nephros <sailfish@nephros.org> - 0.8.0-6
 - add PR#1 and PR#2 as patches
 - obsoloete the other 0.8.0 git version
