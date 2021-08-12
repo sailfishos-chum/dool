@@ -4,7 +4,7 @@ Version: 0.9.10
 Release: 1
 Group: Applications/System
 URL: https://github.com/scottchiefbaker/dool/
-License: GPL
+License: GPLv2
 Macros:
   - 'upstream_name;dool'
   - 'upstream_commit;02b1c69' # << BUMP VERSION HERE
@@ -50,10 +50,11 @@ Requires:
   - python > 2.9
   - python3-six
 Provides:
-  - dstat
+  - dstat = %{version}
+  - harbour-dstat = %{version}
 Obsoletes:
-  - dstat <= 0.7.2
-  - harbour-dstat <= %{version}
+  - dstat < %{version}
+  - harbour-dstat < %{version}
 Files:
   - '%license COPYING'
   - '%{_bindir}/dool'

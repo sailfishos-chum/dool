@@ -14,7 +14,7 @@ Summary:    Pluggable real-time performance monitoring tool
 Version:    0.9.10
 Release:    1
 Group:      Applications/System
-License:    GPL
+License:    GPLv2
 BuildArch:  noarch
 URL:        https://github.com/scottchiefbaker/dool/
 Source0:    %{name}-%{version}.tar.gz
@@ -25,9 +25,10 @@ Requires:   python > 2.9
 Requires:   python3-six
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python3-rpm-macros
-Provides:   dstat
-Obsoletes:   dstat <= 0.7.2
-Obsoletes:   harbour-dstat <= %{version}
+Provides:   dstat = %{version}
+Provides:   harbour-dstat = %{version}
+Obsoletes:   dstat < %{version}
+Obsoletes:   harbour-dstat < %{version}
 
 %description
 Dool is a Python3 compatible clone of Dstat.
@@ -85,6 +86,10 @@ install -Dp -m0644 plugins/dool_*.py %{buildroot}/%{_datadir}/%{name}/plugins/
 # << install pre
 
 # >> install post
+# fix shebangs for python3:
+find %{buildroot}%{_bindir} -type f -exec sed -i '1s=^#!/usr/bin/\(python\|env python\)[23]\?=#!%{__python3}=' {} +
+find %{buildroot}%{_datadir} -type f -exec sed -i '1s=^#!/usr/bin/\(python\|env python\)[23]\?=#!%{__python3}=' {} +
+
 pushd %{buildroot}/%{_bindir}
 ln -s dool dstat
 popd
