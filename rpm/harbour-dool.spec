@@ -17,7 +17,7 @@ Group:      Applications/System
 License:    GPL
 BuildArch:  noarch
 URL:        https://github.com/scottchiefbaker/dool/
-Source0:    https://github.com/scottchiefbaker/dool/archive/%{upstream_commit}.tar.gz
+Source0:    %{name}-%{version}.tar.gz
 Source100:  harbour-dool.yaml
 Patch0:     PR1.patch
 Patch1:     PR2.patch
@@ -54,7 +54,7 @@ never expected.
 
 
 %prep
-%setup -q -n %{upstream_name}-%{version}/upstream
+%setup -q -n %{name}-%{version}/upstream
 
 # PR1.patch
 %patch0 -p1
