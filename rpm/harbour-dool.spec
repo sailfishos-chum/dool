@@ -7,6 +7,8 @@ Name:       harbour-dool
 
 # >> macros
 # << macros
+%define upstream_name dool
+%define upstream_commit 02b1c69
 
 Summary:    Pluggable real-time performance monitoring tool
 Version:    0.9.10
@@ -15,7 +17,7 @@ Group:      Applications/System
 License:    GPL
 BuildArch:  noarch
 URL:        https://github.com/scottchiefbaker/dool/
-Source0:    https://github.com/scottchiefbaker/dool/archive/02b1c69d441764b030db5e78b4b6fb231c29f8f1.tar.gz
+Source0:    https://github.com/scottchiefbaker/dool/archive/%{upstream_commit}.tar.gz
 Source100:  harbour-dool.yaml
 Patch0:     PR1.patch
 Patch1:     PR2.patch
@@ -52,7 +54,7 @@ never expected.
 
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n %{upstream_name}-%{version}/upstream
 
 # PR1.patch
 %patch0 -p1

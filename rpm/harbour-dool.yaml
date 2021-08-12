@@ -6,7 +6,7 @@ Group: Applications/System
 URL: https://github.com/scottchiefbaker/dool/
 License: GPL
 Sources:
-  - https://github.com/scottchiefbaker/dool/archive/02b1c69d441764b030db5e78b4b6fb231c29f8f1.tar.gz
+  - https://github.com/scottchiefbaker/dool/archive/%{upstream_commit}.tar.gz
 Patches:
   - PR1.patch
   - PR2.patch
@@ -35,6 +35,10 @@ Description: |
   never expected.
 
 BuildArch: noarch
+Macros:
+  - 'upstream_name;dool'
+  - 'upstream_commit;02b1c69'
+SetupOptions: '-q -n %{upstream_name}-%{version}/upstream'
 Configure: none
 Builder: none
 PkgBR:
