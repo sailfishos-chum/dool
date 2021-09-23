@@ -1,7 +1,7 @@
 Name: harbour-dool
 Summary: Pluggable real-time performance monitoring tool
 Version: 0.9.10
-Release: 1
+Release: 2
 Group: Applications/System
 URL: https://github.com/scottchiefbaker/dool/
 License: GPLv2
@@ -46,9 +46,6 @@ PkgBR:
   - python3-rpm-macros
 PkgConfigBR:
   - python
-Requires:
-  - python > 2.9
-  - python3-six
 Provides:
   - dstat = %{version}
   - harbour-dstat = %{version}
