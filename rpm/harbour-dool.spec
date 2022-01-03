@@ -52,6 +52,16 @@ confusion, less mistakes. And most importantly, it makes it very easy
 to write plugins to collect your own counters and extend in ways you
 never expected.
 
+%if "%{?vendor}" == "chum"
+PackageName: dool (a.k.a. dstat)
+DeveloperName: nephros
+Type: console-application
+Categories:
+  - Utilities
+Screenshots:
+  - https://gitlab.com/nephros/harbour-dstat/-/raw/master/screenshot.png
+%endif
+
 
 %prep
 %setup -q -n %{name}-%{version}/upstream
