@@ -57,7 +57,7 @@ PackageName: dool (a.k.a. dstat)
 DeveloperName: nephros
 Type: console-application
 Categories:
-  - Utilities
+  - Utility
 Screenshots:
   - https://gitlab.com/nephros/harbour-dstat/-/raw/master/screenshot.png
 %endif

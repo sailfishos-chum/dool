@@ -19,19 +19,19 @@ Description: |
   After Dag Wieers ceased development of Dstat scottchiefbaker forked the
   project to continue development. Dool is a Python 2.x and 3.x compatible
   version of Dstat with a couple minor bug fixes.
-  
+
   The Description for original dstat follows:
-  
+
   Dstat is a versatile replacement for vmstat, iostat, netstat and ifstat.
   Dstat overcomes some of their limitations and adds some extra features,
   more counters and flexibility. Dstat is handy for monitoring systems
   during performance tuning tests, benchmarks or troubleshooting.
-  
+
   Dstat allows you to view all of your system resources in real-time, you
   can eg. compare disk utilization in combination with interrupts from your
   IDE controller, or compare the network bandwidth numbers directly
   with the disk throughput (in the same interval).
-  
+
   Dstat gives you detailed selective information in columns and clearly
   indicates in what magnitude and unit the output is displayed. Less
   confusion, less mistakes. And most importantly, it makes it very easy
@@ -43,7 +43,7 @@ Description: |
   DeveloperName: nephros
   Type: console-application
   Categories:
-    - Utilities
+    - Utility
   Screenshots:
     - https://gitlab.com/nephros/harbour-dstat/-/raw/master/screenshot.png
   %endif
