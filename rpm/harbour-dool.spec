@@ -7,11 +7,9 @@ Name:       harbour-dool
 
 # >> macros
 # << macros
-%define upstream_name dool
-%define upstream_commit 02b1c69
 
 Summary:    Pluggable real-time performance monitoring tool
-Version:    0.9.10
+Version:    1.0.0
 Release:    2
 Group:      Applications/System
 License:    GPLv2
@@ -21,6 +19,7 @@ Source0:    %{name}-%{version}.tar.gz
 Source100:  harbour-dool.yaml
 Patch0:     PR1.patch
 Patch1:     PR2.patch
+Patch2:     PR22.patch
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python3-rpm-macros
 Provides:   dstat = %{version}
@@ -54,12 +53,17 @@ never expected.
 
 %if "%{?vendor}" == "chum"
 PackageName: dool (a.k.a. dstat)
-DeveloperName: nephros
+PackagerName: nephros
 Type: console-application
 Categories:
+  - System
+  - Monitor
   - Utility
 Screenshots:
   - https://gitlab.com/nephros/harbour-dstat/-/raw/master/screenshot.png
+Custom:
+  Repo: https://github.com/scottchiefbaker/dool
+  PackagingRepo: https://gitlab.com/nephros/harbour-dstat
 %endif
 
 
@@ -70,6 +74,8 @@ Screenshots:
 %patch0 -p1
 # PR2.patch
 %patch1 -p1
+# PR22.patch
+%patch2 -p1
 # >> setup
 # << setup
 

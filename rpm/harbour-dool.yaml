@@ -1,19 +1,16 @@
 Name: harbour-dool
 Summary: Pluggable real-time performance monitoring tool
-Version: 0.9.10
+Version: 1.0.0
 Release: 2
 Group: Applications/System
 URL: https://github.com/scottchiefbaker/dool/
 License: GPLv2
-Macros:
-  - 'upstream_name;dool'
-  - 'upstream_commit;02b1c69' # << BUMP VERSION HERE
 Sources:
-  # https://github.com/scottchiefbaker/dool/archive/%{upstream_commit}.tar.gz
   - '%{name}-%{version}.tar.gz'
 Patches:
   - PR1.patch
   - PR2.patch
+  - PR22.patch
 Description: |
   Dool is a Python3 compatible clone of Dstat.
   After Dag Wieers ceased development of Dstat scottchiefbaker forked the
@@ -40,12 +37,17 @@ Description: |
 
   %if "%{?vendor}" == "chum"
   PackageName: dool (a.k.a. dstat)
-  DeveloperName: nephros
+  PackagerName: nephros
   Type: console-application
   Categories:
+    - System
+    - Monitor
     - Utility
   Screenshots:
     - https://gitlab.com/nephros/harbour-dstat/-/raw/master/screenshot.png
+  Custom:
+    Repo: https://github.com/scottchiefbaker/dool
+    PackagingRepo: https://gitlab.com/nephros/harbour-dstat
   %endif
 
 BuildArch: noarch
