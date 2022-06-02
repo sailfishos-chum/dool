@@ -1,7 +1,7 @@
 Name: harbour-dool
 Summary: Pluggable real-time performance monitoring tool
 Version: 1.0.0
-Release: 2
+Release: 1
 Group: Applications/System
 URL: https://github.com/scottchiefbaker/dool/
 License: GPLv2
@@ -54,6 +54,9 @@ BuildArch: noarch
 SetupOptions: '-q -n %{name}-%{version}/upstream'
 Configure: none
 Builder: none
+Requires:
+  # not stricly necessary, for color support
+  - python3-curses
 PkgBR:
   - python3-rpm-macros
 PkgConfigBR:

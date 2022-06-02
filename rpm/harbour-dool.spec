@@ -10,7 +10,7 @@ Name:       harbour-dool
 
 Summary:    Pluggable real-time performance monitoring tool
 Version:    1.0.0
-Release:    2
+Release:    1
 Group:      Applications/System
 License:    GPLv2
 BuildArch:  noarch
@@ -20,6 +20,7 @@ Source100:  harbour-dool.yaml
 Patch0:     PR1.patch
 Patch1:     PR2.patch
 Patch2:     PR22.patch
+Requires:   python3-curses
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python3-rpm-macros
 Provides:   dstat = %{version}

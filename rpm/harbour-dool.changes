@@ -1,3 +1,8 @@
+* Thu Jun  2 2022 Nephros <sailfish@nephros.org> - 1.0.0-1
+- add dependency on python-ncurses for coor support
+- version bump
+- add patch from PR#22
+
 * Thu May 12 2022 Nephros <sailfish@nephros.org> - 1.0.0
 - version bump
 - add patch from PR#22
