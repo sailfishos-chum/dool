@@ -1,0 +1,13 @@
+diff --git a/dool b/dool
+index ff509c5..5f076f6 100755
+--- a/dool
++++ b/dool
+@@ -810,7 +810,7 @@ class dool_disk(dstat):
+         ret = []
+         for l in self.splitlines():
+             if len(l) < 13: continue
+-            if l[3:] == ['0',] * 11: continue
++            if l[3:] == ['0',] * (len(l) - 3): continue
+             name = l[2]
+             ret.append(name)
+         for item in objlist: ret.append(item)

@@ -1,0 +1,11 @@
+* Wed Jun  9 2021 Nephros <sailfish@nephros.org> - 0.8.0-6
+- add PR#1 and PR#2 as patches
+- obsoloete the other 0.8.0 git version
+
+* Wed Jun  9 2021 Nephros <sailfish@nephros.org> - 0.8.0-5
+- add PR#1 and PR#2 as patches
+
+* Mon Nov 16 2020 Nephros <sailfish@nephros.org> - 0.8.0-4
+- Obsolete harbour-dstat for harbour-dool package.
+- Replace dstat with the dool fork
+- package 0.8.0-pre from github for SailfishOS

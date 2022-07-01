@@ -1,0 +1,55 @@
+Name: harbour-dool
+Summary: Pluggable real-time performance monitoring tool
+Version: 0.9.10
+Release: 1
+Group: Applications/System
+URL: https://github.com/scottchiefbaker/dool/
+License: GPL
+Sources:
+  - https://github.com/scottchiefbaker/dool/archive/02b1c69d441764b030db5e78b4b6fb231c29f8f1.tar.gz
+Patches:
+  - PR1.patch
+  - PR2.patch
+Description: |
+  Dool is a Python3 compatible clone of Dstat.
+  After Dag Wieers ceased development of Dstat scottchiefbaker forked the
+  project to continue development. Dool is a Python 2.x and 3.x compatible
+  version of Dstat with a couple minor bug fixes.
+  
+  The Description for original dstat follows:
+  
+  Dstat is a versatile replacement for vmstat, iostat, netstat and ifstat.
+  Dstat overcomes some of their limitations and adds some extra features,
+  more counters and flexibility. Dstat is handy for monitoring systems
+  during performance tuning tests, benchmarks or troubleshooting.
+  
+  Dstat allows you to view all of your system resources in real-time, you
+  can eg. compare disk utilization in combination with interrupts from your
+  IDE controller, or compare the network bandwidth numbers directly
+  with the disk throughput (in the same interval).
+  
+  Dstat gives you detailed selective information in columns and clearly
+  indicates in what magnitude and unit the output is displayed. Less
+  confusion, less mistakes. And most importantly, it makes it very easy
+  to write plugins to collect your own counters and extend in ways you
+  never expected.
+
+BuildArch: noarch
+Configure: none
+Builder: none
+PkgBR:
+  - python >= 2.6
+Requires:
+  - python >= 2.6
+  - python-six
+Provides:
+  - dstat
+Obsoletes:
+  - dstat <= 0.7.2
+  - harbour-dstat <= %{version}
+Files:
+  - '%license COPYING'
+  - '%{_bindir}/dool'
+  - '%{_bindir}/dstat'
+  - '%{_datadir}/%{name}/'
+
