@@ -10,7 +10,7 @@ Name:       harbour-dool
 
 Summary:    Pluggable real-time performance monitoring tool
 Version:    1.0.0
-Release:    1
+Release:    3
 Group:      Applications/System
 License:    GPLv2
 BuildArch:  noarch
@@ -61,10 +61,10 @@ Categories:
   - Monitor
   - Utility
 Screenshots:
-  - https://gitlab.com/nephros/harbour-dstat/-/raw/master/screenshot.png
+  - https://github.com/sailfishos-chum/dool/raw/master/screenshot.png
 Custom:
   Repo: https://github.com/scottchiefbaker/dool
-  PackagingRepo: https://gitlab.com/nephros/harbour-dstat
+  PackagingRepo: https://github.com/sailfishos-chum/dool
 %endif
 
 
