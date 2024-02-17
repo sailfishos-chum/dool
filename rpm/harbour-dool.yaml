@@ -7,10 +7,6 @@ URL: https://github.com/scottchiefbaker/dool/
 License: GPLv2
 Sources:
   - '%{name}-%{version}.tar.gz'
-Patches:
-  # PR1.patch # for 1.1.0
-  # PR2.patch # for 1.1.0
-  - PR22.patch
 Description: |
   Dool is a Python3 compatible clone of Dstat.
   After Dag Wieers ceased development of Dstat scottchiefbaker forked the
