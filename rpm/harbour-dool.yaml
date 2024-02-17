@@ -64,7 +64,7 @@ Obsoletes:
   - dstat < %{version}
   - harbour-dstat < %{version}
 Files:
-  - '%license COPYING'
+  - '%license LICENSE'
   - '%{_bindir}/dool'
   - '%{_bindir}/dstat'
   - '%{_datadir}/%{name}/'

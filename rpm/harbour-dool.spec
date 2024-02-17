@@ -103,7 +103,7 @@ popd
 
 %files
 %defattr(-,root,root,-)
-%license COPYING
+%license LICENSE
 %{_bindir}/dool
 %{_bindir}/dstat
 %{_datadir}/%{name}/
