@@ -9,7 +9,7 @@ Sources:
   - '%{name}-%{version}.tar.gz'
 Patches:
   # PR1.patch # for 1.1.0
-  - PR2.patch
+  # PR2.patch # for 1.1.0
   - PR22.patch
 Description: |
   Dool is a Python3 compatible clone of Dstat.
