@@ -8,7 +8,7 @@ License: GPLv2
 Sources:
   - '%{name}-%{version}.tar.gz'
 Patches:
-  - PR1.patch
+  # PR1.patch # for 1.1.0
   - PR2.patch
   - PR22.patch
 Description: |

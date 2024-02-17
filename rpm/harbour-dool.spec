@@ -17,9 +17,8 @@ BuildArch:  noarch
 URL:        https://github.com/scottchiefbaker/dool/
 Source0:    %{name}-%{version}.tar.gz
 Source100:  harbour-dool.yaml
-Patch0:     PR1.patch
-Patch1:     PR2.patch
-Patch2:     PR22.patch
+Patch0:     PR2.patch
+Patch1:     PR22.patch
 Requires:   python3-curses
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python3-rpm-macros
@@ -71,12 +70,10 @@ Custom:
 %prep
 %setup -q -n %{name}-%{version}/upstream
 
-# PR1.patch
-%patch0 -p1
 # PR2.patch
-%patch1 -p1
+%patch0 -p1
 # PR22.patch
-%patch2 -p1
+%patch1 -p1
 # >> setup
 # << setup
 
