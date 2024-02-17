@@ -9,8 +9,8 @@ Name:       harbour-dool
 # << macros
 
 Summary:    Pluggable real-time performance monitoring tool
-Version:    1.1.0
-Release:    3
+Version:    1.3.1
+Release:    1
 Group:      Applications/System
 License:    GPLv2
 BuildArch:  noarch
@@ -53,8 +53,8 @@ to write plugins to collect your own counters and extend in ways you
 never expected.
 
 %if "%{?vendor}" == "chum"
-PackageName: dool (a.k.a. dstat)
-PackagerName: nephros
+Title: dool (a.k.a. dstat)
+PackagedBy: nephros
 Type: console-application
 Categories:
   - System
